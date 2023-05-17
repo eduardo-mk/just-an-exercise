@@ -1,0 +1,14 @@
+.dot-green {
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: #1ccf1c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.row {
+    cursor: pointer;
+}
+.row:hover {
+    background-color: rgb(223, 223, 223);
+}

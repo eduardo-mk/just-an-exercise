@@ -1,29 +1,13 @@
 import { CustomAction } from '../App'
-import Checkbox from '../Checkbox'
 import { DataItem } from '../types/table-data-response'
+import Row from './Row'
+import './style.css'
 
 export interface DataTableProps {
     data: DataItem[]
     dispatch: React.Dispatch<CustomAction>
 }
 
-interface RowProps {
-    item: DataItem
-    onClickHandler: (name: string) => void
-}
-function Row({ item, onClickHandler }: RowProps) {
-    return (
-        <tr onClick={() => onClickHandler(item.name)}>
-            <td>
-                <input type="checkbox" checked={item.selected} />
-            </td>
-            <td>{item.name}</td>
-            <td>{item.device}</td>
-            <td>{item.path}</td>
-            <td>{item.status}</td>
-        </tr>
-    )
-}
 export default function Table({ data, dispatch }: DataTableProps) {
     function onClickRowHandler(name: string) {
         dispatch({ type: 'select/one', payload: name })

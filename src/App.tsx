@@ -1,4 +1,4 @@
-import { useReducer, useRef } from 'react'
+import { useReducer } from 'react'
 import Table from './Table'
 import { DataItem } from './types/table-data-response'
 import Checkbox from './Checkbox'

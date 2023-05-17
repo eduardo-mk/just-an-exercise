@@ -5,15 +5,19 @@ interface RowProps {
     onClickHandler: (name: string) => void
 }
 export default function Row({ item, onClickHandler }: RowProps) {
+    const markForStatus =
+        item.status === 'available' ? <span className="dot-green"></span> : null
     return (
-        <tr onClick={() => onClickHandler(item.name)}>
+        <tr className="row" onClick={() => onClickHandler(item.name)}>
             <td>
-                <input type="checkbox" checked={item.selected} />
+                <input type="checkbox" defaultChecked={item.selected} />
             </td>
             <td>{item.name}</td>
             <td>{item.device}</td>
             <td>{item.path}</td>
-            <td>{item.status}</td>
+            <td>
+                {markForStatus} {item.status}
+            </td>
         </tr>
     )
 }
