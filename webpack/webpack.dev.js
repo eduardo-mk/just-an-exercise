@@ -12,7 +12,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.name': JSON.stringify('Hey new environment var.'),
+            'process.env.name': JSON.stringify('New vars here.'),
         }),
         new ReactRefreshWebpackPlugin(),
     ],

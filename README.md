@@ -38,3 +38,4 @@ npm run prettier
 -   I tried to add tests to the code to make it more protected for future regression issues.
 -   I added TypeScript to contribute to the overall documentation of the project.
 -   I assumed that names are unique, so I took advantage of it.
+-   There is one state I couldn't figure out in the select all button but I guess we can clarify that later.
