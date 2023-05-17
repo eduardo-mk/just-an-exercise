@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1684362252684" clover="3.2.0">
+  <project timestamp="1684362252684" name="All files">
+    <metrics statements="11" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="3" elements="18" coveredelements="12" complexity="0" loc="11" ncloc="11" packages="1" files="3" classes="3"/>
+    <file name="Row.tsx" path="C:\Users\Eduardo\OneDrive\Escritorio\Crowdstrike\just-an-exercise\src\Table\Row.tsx">
+      <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+      <line num="9" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+    </file>
+    <file name="index.tsx" path="C:\Users\Eduardo\OneDrive\Escritorio\Crowdstrike\just-an-exercise\src\Table\index.tsx">
+      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="31" count="3" type="stmt"/>
+    </file>
+    <file name="style.css" path="C:\Users\Eduardo\OneDrive\Escritorio\Crowdstrike\just-an-exercise\src\Table\style.css">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

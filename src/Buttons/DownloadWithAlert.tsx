@@ -13,7 +13,6 @@ export default function ButtonDownloadAlert({
     let finalMessage: string = ''
     if (Array.isArray(message)) {
         message.forEach((elementOfMessage) => {
-            console.log('Message popup', JSON.stringify(elementOfMessage))
             finalMessage =
                 finalMessage + `${JSON.stringify(elementOfMessage)}\n\n\n`
         })

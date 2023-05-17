@@ -8,10 +8,17 @@ export default function Row({ item, onClickHandler }: RowProps) {
     const markForStatus =
         item.status === 'available' ? <span className="dot-green"></span> : null
     return (
-        <tr className="row" onClick={() => onClickHandler(item.name)}>
+        <tr
+            className="row"
+            onClick={() => onClickHandler(item.name)}
+            data-testid={`row-${item.name}`}
+        >
             <td>
                 <input
-                    type="checkbox" checked={item.selected}
+                    type="checkbox"
+                    checked={item.selected}
+                    readOnly
+                    data-testid="checkbox"
                 />
             </td>
             <td>{item.name}</td>

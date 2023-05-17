@@ -16,7 +16,7 @@ export default function Table({ data, dispatch }: DataTableProps) {
     }
 
     return (
-        <table>
+        <table data-testid="table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -27,9 +27,9 @@ export default function Table({ data, dispatch }: DataTableProps) {
             </thead>
 
             <tbody>
-                {data.map((item, index) => (
+                {data.map((item) => (
                     <Row
-                        key={index}
+                        key={item.name}
                         item={item}
                         onClickHandler={onClickRowHandler}
                     />
