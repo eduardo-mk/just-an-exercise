@@ -2,6 +2,7 @@ import { useReducer } from 'react'
 import Table from './Table'
 import { DataItem } from './types/table-data-response'
 import Checkbox from './Checkbox'
+import ButtonDownloadAlert from './Buttons/DownloadWithAlert'
 
 const data = [
     {
@@ -68,7 +69,7 @@ function reducer(state: AppState, action: CustomAction) {
         case 'select/all':
             const selectAll = state.data.map((item) => ({
                 ...item,
-                selected: !item.selected,
+                selected: true,
             }))
             return { ...state, data: selectAll }
         case 'unselect/all':
@@ -85,7 +86,7 @@ function reducer(state: AppState, action: CustomAction) {
         case 'update/checkbox':
             const allAreSelected = state.data.every((item) => item.selected)
             const noneSelected = state.data.every((item) => !item.selected)
-            let checkBoxState = 'empty'
+            let checkBoxState = ''
             if (allAreSelected) {
                 checkBoxState = 'checked'
             } else if (noneSelected) {
@@ -114,8 +115,13 @@ export default function App() {
             dispatch({ type: 'unselect/all', payload: null })
         } else if (current === 'empty') {
             dispatch({ type: 'select/all', payload: null })
+        } else {
+            // NOTE: Discuss with UX what state is next here.
+            // This is just a proposal but needs confirmation.
+            dispatch({ type: 'select/all', payload: null })
         }
         dispatch({ type: 'update/checkbox', payload: null })
+        dispatch({ type: 'count/selections', payload: null })
     }
 
     return (
@@ -124,6 +130,15 @@ export default function App() {
                 labelName={`Selected ${state.selectedCount}`}
                 value={state.checkBoxState}
                 onClick={selectAllHandler}
+            />
+            <ButtonDownloadAlert
+                name={'Download'}
+                disabled={state.selectedCount === 0}
+                message={state.data
+                    .filter(
+                        (item) => item.status === 'available' && item.selected
+                    )
+                    .map((item) => ({ device: item.device, path: item.path }))}
             />
             <Table data={state.data} dispatch={dispatch} />
         </div>

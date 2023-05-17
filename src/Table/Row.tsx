@@ -10,7 +10,9 @@ export default function Row({ item, onClickHandler }: RowProps) {
     return (
         <tr className="row" onClick={() => onClickHandler(item.name)}>
             <td>
-                <input type="checkbox" defaultChecked={item.selected} />
+                <input
+                    type="checkbox" checked={item.selected}
+                />
             </td>
             <td>{item.name}</td>
             <td>{item.device}</td>

@@ -31,7 +31,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ labelName, value, onClick }) => {
 
     return (
         <label onClick={onClick}>
-            <input ref={checkboxRef} type="checkbox" />
+            <input ref={checkboxRef} type="checkbox" defaultChecked={false} />
             {labelName}
         </label>
     )
