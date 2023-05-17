@@ -140,7 +140,16 @@ export default function App() {
                     )
                     .map((item) => ({ device: item.device, path: item.path }))}
             />
-            <Table data={state.data} dispatch={dispatch} />
+            <Table
+                data={state.data}
+                dispatch={dispatch}
+                titleSpecs={[
+                    { title: 'Name', include: true },
+                    { title: 'Device', include: true },
+                    { title: 'Path', include: true },
+                    { title: 'Status', include: true },
+                ]}
+            />
         </div>
     )
 }

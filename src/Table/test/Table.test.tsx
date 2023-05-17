@@ -29,7 +29,18 @@ const data = [
 const dispatch = jest.fn()
 
 it('should render the table with the correct props', () => {
-    const {container} = render(<Table data={data} dispatch={dispatch} />)
+    const { container } = render(
+        <Table
+            data={data}
+            dispatch={dispatch}
+            titleSpecs={[
+                { title: 'Name', include: true },
+                { title: 'Device', include: true },
+                { title: 'Path', include: true },
+                { title: 'Status', include: true },
+            ]}
+        />
+    )
 
     expect(screen.getByRole('table')).toBeTruthy()
     expect(container.getElementsByClassName('row')).toHaveLength(3)

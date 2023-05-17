@@ -22,18 +22,19 @@ WIP
 npm run test
 ```
 
-## Briefly explanation of my thinking
+## Run prettier
 
--   Hanlde the state of the exercise with reducers, this will make easier to trigger actions
-    and share the dispatch object.
+WIP
 
--   Centralize logic: In this case in the App component, this helped me to deal with presentational component,
-    handling data and updating separately, making it a little bit easier to maintain.
+```console
+npm run prettier
+```
 
--   I did not add CSS (Just the basic).
+### Briefly explanation of my thinking
 
--   I tried to add test to the code is more protected for future regression issues.
-
--   I added typescript to contributre with the overall documentation of the project.
-
--   I assummed that names are unique so I took advantage of it.
+-   Handle the state of the exercise with reducers. This will make it easier to trigger actions and share the dispatch object.
+-   Centralize logic. In this case, in the App component. This helped me to deal with presentational components, handling data, and updating separately, making it a little bit easier to maintain.
+-   I did not add CSS (just the basic).
+-   I tried to add tests to the code to make it more protected for future regression issues.
+-   I added TypeScript to contribute to the overall documentation of the project.
+-   I assumed that names are unique, so I took advantage of it.

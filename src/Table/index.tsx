@@ -1,14 +1,16 @@
 import { CustomAction } from '../App'
 import { DataItem } from '../types/table-data-response'
+import HeadConfigurator from './Head'
 import Row from './Row'
 import './style.css'
 
 export interface DataTableProps {
     data: DataItem[]
     dispatch: React.Dispatch<CustomAction>
+    titleSpecs: Array<{ title: string; include: boolean }>
 }
 
-export default function Table({ data, dispatch }: DataTableProps) {
+export default function Table({ data, dispatch, titleSpecs }: DataTableProps) {
     function onClickRowHandler(name: string) {
         dispatch({ type: 'select/one', payload: name })
         dispatch({ type: 'count/selections', payload: null })
@@ -17,15 +19,7 @@ export default function Table({ data, dispatch }: DataTableProps) {
 
     return (
         <table data-testid="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Device</th>
-                    <th>Path</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-
+            <HeadConfigurator titleSpecs={titleSpecs} />
             <tbody>
                 {data.map((item) => (
                     <Row

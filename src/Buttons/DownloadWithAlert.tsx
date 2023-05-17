@@ -5,6 +5,16 @@ interface ButtonDownloadProps {
     message: any[] | string
     disabled: boolean
 }
+
+function basicParseByLine(messageArr: Array<any>) {
+    let msg = ''
+    messageArr.forEach((elementOfMessage: any) => {
+        msg = msg + `${JSON.stringify(elementOfMessage)}\n\n\n`
+    })
+
+    return msg
+}
+
 export default function ButtonDownloadAlert({
     name,
     disabled,
@@ -12,10 +22,7 @@ export default function ButtonDownloadAlert({
 }: ButtonDownloadProps) {
     let finalMessage: string = ''
     if (Array.isArray(message)) {
-        message.forEach((elementOfMessage) => {
-            finalMessage =
-                finalMessage + `${JSON.stringify(elementOfMessage)}\n\n\n`
-        })
+        finalMessage = basicParseByLine(message)
     } else if (typeof message === 'string') {
         finalMessage = message
     }
