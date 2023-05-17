@@ -11,7 +11,7 @@ npm install
 ## Execute the project
 
 ```console
-npm run dev
+npm start
 ```
 
 ## Run test
