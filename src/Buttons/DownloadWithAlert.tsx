@@ -1,5 +1,3 @@
-import { DataItem } from '../types/table-data-response'
-
 interface ButtonDownloadProps {
     name: string
     message: any[] | string

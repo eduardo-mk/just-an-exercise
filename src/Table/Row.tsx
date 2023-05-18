@@ -15,10 +15,10 @@ export default function Row({ item, onClickHandler }: RowProps) {
             title={`Name: ${item.name}`}
         >
             <td>
-                <label htmlFor="select-item">
+                <label htmlFor={`select-item-${item.name}`}>
                     <input
                         title={item.name}
-                        id={`select-item ${item.name}`}
+                        id={`select-item-${item.name}`}
                         type="checkbox"
                         checked={item.selected}
                         readOnly

@@ -8,4 +8,9 @@ export default {
         '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
         '^.+\\.(css|less|scss|sass)$': 'jest-transform-css',
     },
+    collectCoverageFrom: [
+        '**/*.{js,jsx,ts,tsx}',
+        '!**/*.css',
+        '!**/node_modules/**',
+    ],
 }
