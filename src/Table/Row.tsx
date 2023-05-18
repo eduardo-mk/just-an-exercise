@@ -16,14 +16,14 @@ export default function Row({ item, onClickHandler }: RowProps) {
         >
             <td>
                 <label htmlFor="select-item">
-                <input
-                title={item.name}
-                    id={`select-item ${item.name}`}
-                    type="checkbox"
-                    checked={item.selected}
-                    readOnly
-                    data-testid="checkbox"
-                />
+                    <input
+                        title={item.name}
+                        id={`select-item ${item.name}`}
+                        type="checkbox"
+                        checked={item.selected}
+                        readOnly
+                        data-testid="checkbox"
+                    />
                 </label>
             </td>
             <td>{item.name}</td>

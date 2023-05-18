@@ -126,29 +126,32 @@ export default function App() {
     }
 
     return (
-        <div className='app'>
-            <section className='app_options'>
-            <Checkbox
-                labelName={` Selected ${state.selectedCount}`}
-                value={state.checkBoxState}
-                onClick={selectAllHandler}
-            />
-            <ButtonDownloadAlert
-                name={'Download'}
-                disabled={state.selectedCount === 0}
-                message={state.data
-                    .filter(
-                        (item) => item.status === 'available' && item.selected
-                    )
-                    .map((item) => ({ device: item.device, path: item.path }))}
-            />
-
+        <div className="app">
+            <section className="app_options">
+                <Checkbox
+                    labelName={` Selected ${state.selectedCount}`}
+                    value={state.checkBoxState}
+                    onClick={selectAllHandler}
+                />
+                <ButtonDownloadAlert
+                    name={'Download'}
+                    disabled={state.selectedCount === 0}
+                    message={state.data
+                        .filter(
+                            (item) =>
+                                item.status === 'available' && item.selected
+                        )
+                        .map((item) => ({
+                            device: item.device,
+                            path: item.path,
+                        }))}
+                />
             </section>
             <Table
                 data={state.data}
                 dispatch={dispatch}
                 titleSpecs={[
-                     {title: '', include: true},
+                    { title: '', include: true },
                     { title: 'Name', include: true },
                     { title: 'Device', include: true },
                     { title: 'Path', include: true },

@@ -31,7 +31,11 @@ export default function ButtonDownloadAlert({
     }
 
     return (
-        <button className='download_btn' disabled={disabled} onClick={triggerAlertBox}>
+        <button
+            className="download_btn"
+            disabled={disabled}
+            onClick={triggerAlertBox}
+        >
             {name}
         </button>
     )
