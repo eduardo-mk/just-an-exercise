@@ -12,14 +12,19 @@ export default function Row({ item, onClickHandler }: RowProps) {
             className="row"
             onClick={() => onClickHandler(item.name)}
             data-testid={`row-${item.name}`}
+            title={`Name: ${item.name}`}
         >
             <td>
+                <label htmlFor="select-item">
                 <input
+                title={item.name}
+                    id={`select-item ${item.name}`}
                     type="checkbox"
                     checked={item.selected}
                     readOnly
                     data-testid="checkbox"
                 />
+                </label>
             </td>
             <td>{item.name}</td>
             <td>{item.device}</td>

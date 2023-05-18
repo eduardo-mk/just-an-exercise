@@ -1,0 +1,12 @@
+.app_options {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 15rem;
+    margin-bottom: 0.5rem;
+}
+
+.app_options label {
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+}

@@ -3,6 +3,7 @@ import Table from './Table'
 import { DataItem } from './types/table-data-response'
 import Checkbox from './Checkbox'
 import ButtonDownloadAlert from './Buttons/DownloadWithAlert'
+import './main.css'
 
 const data = [
     {
@@ -125,9 +126,10 @@ export default function App() {
     }
 
     return (
-        <div>
+        <div className='app'>
+            <section className='app_options'>
             <Checkbox
-                labelName={`Selected ${state.selectedCount}`}
+                labelName={` Selected ${state.selectedCount}`}
                 value={state.checkBoxState}
                 onClick={selectAllHandler}
             />
@@ -140,10 +142,13 @@ export default function App() {
                     )
                     .map((item) => ({ device: item.device, path: item.path }))}
             />
+
+            </section>
             <Table
                 data={state.data}
                 dispatch={dispatch}
                 titleSpecs={[
+                     {title: '', include: true},
                     { title: 'Name', include: true },
                     { title: 'Device', include: true },
                     { title: 'Path', include: true },
