@@ -9,7 +9,7 @@ export default function Row({ item, onClickHandler }: RowProps) {
         item.status === 'available' ? <span className="dot-green"></span> : null
     return (
         <tr
-            className="row"
+            className={`row${item.selected ? ' row_selected' : ''}`}
             onClick={() => onClickHandler(item.name)}
             data-testid={`row-${item.name}`}
             title={`Name: ${item.name}`}

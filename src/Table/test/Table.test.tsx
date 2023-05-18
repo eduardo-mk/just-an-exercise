@@ -34,11 +34,11 @@ describe('Table should:', () => {
                 data={data}
                 dispatch={dispatch}
                 titleSpecs={[
-                    { title: '', include: true },
-                    { title: 'Name', include: true },
-                    { title: 'Device', include: true },
-                    { title: 'Path', include: true },
-                    { title: 'Status', include: true },
+                    { title: '' },
+                    { title: 'Name' },
+                    { title: 'Device' },
+                    { title: 'Path' },
+                    { title: 'Status' },
                 ]}
             />
         )

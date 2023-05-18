@@ -32,10 +32,14 @@ table th:last-child {
     min-width: 5rem;
 }
 
-.row:hover {
+.row:hover:not(.row_selected) {
     background-color: rgb(223, 223, 223);
 }
 
 .download_btn {
     height: 2rem;
+}
+
+.row_selected {
+    background-color: #809eab;
 }
