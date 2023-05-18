@@ -39,3 +39,8 @@ npm run prettier
 -   I added TypeScript to contribute to the overall documentation of the project.
 -   I assumed that names are unique, so I took advantage of it.
 -   There is one state I couldn't figure out in the select all button but I guess we can clarify that later.
+
+### Day - 2
+
+-   Better unit test added
+-   State of select-all button clarified.

@@ -129,7 +129,11 @@ export default function App() {
         <div className="app">
             <section className="app_options">
                 <Checkbox
-                    labelName={` Selected ${state.selectedCount}`}
+                    labelName={
+                        state.selectedCount !== 0
+                            ? `Selected: ${state.selectedCount}`
+                            : 'Not selected'
+                    }
                     value={state.checkBoxState}
                     onClick={selectAllHandler}
                 />
@@ -151,11 +155,11 @@ export default function App() {
                 data={state.data}
                 dispatch={dispatch}
                 titleSpecs={[
-                    { title: '', include: true },
-                    { title: 'Name', include: true },
-                    { title: 'Device', include: true },
-                    { title: 'Path', include: true },
-                    { title: 'Status', include: true },
+                    { title: '' },
+                    { title: 'Name' },
+                    { title: 'Device' },
+                    { title: 'Path' },
+                    { title: 'Status' },
                 ]}
             />
         </div>

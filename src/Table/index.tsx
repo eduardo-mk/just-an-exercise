@@ -7,7 +7,7 @@ import './style.css'
 export interface DataTableProps {
     data: DataItem[]
     dispatch: React.Dispatch<CustomAction>
-    titleSpecs: Array<{ title: string; include: boolean }>
+    titleSpecs: Array<{ title: string }>
 }
 
 export default function Table({ data, dispatch, titleSpecs }: DataTableProps) {
